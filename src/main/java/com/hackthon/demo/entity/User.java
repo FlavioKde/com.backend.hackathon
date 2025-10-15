@@ -1,9 +1,13 @@
 package com.hackthon.demo.entity;
 
 
-// Entity
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+
+@Entity
 public class User {
 
+    @Column
     private long id;
     private String name;
     private String email;
