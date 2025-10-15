@@ -33,8 +33,7 @@ public class FeedbackService {
      * @return un Optional que contiene el feedback si se encuentra, o un Optional vacío si no.
      */
     public Optional<Feedback> findById(Long id) {
-        // Llama al método findById() del repositorio.
-        // Devuelve un Optional para que el controlador pueda manejar el caso de "no encontrado".
+
         return feedbackRepository.findById(id);
     }
 }
