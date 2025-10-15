@@ -1,4 +1,4 @@
-package config;
+package com.hackthon.demo.config;
 
 public class ApiConfig {
 
