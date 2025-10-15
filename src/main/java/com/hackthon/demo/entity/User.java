@@ -3,44 +3,50 @@ package com.hackthon.demo.entity;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
+@Table(name = "users")
 public class User {
 
-    @Column
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String username;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false)
     private String password;
-    private List<Role> roles;
 
-    public User(){}
-
-    public User(long id, String name, String email, String password, List<Role> roles) {
-        this.id = id;
-        this.username = name;
-        this.email = email;
-        this.password = password;
-        this.roles = new ArrayList<>();
+    // JPA requiere un constructor sin argumentos
+    public User() {
     }
 
-    public long getId() {
+    // Constructor para crear nuevos usuarios fácilmente (sin el id)
+    public User(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
+
+    // --- Getters y Setters ---
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getUserName() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String name) {
-        this.username = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -55,15 +61,10 @@ public class User {
         return password;
     }
 
+
+
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
     }
 }
 
