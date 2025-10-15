@@ -1,7 +1,3 @@
-CREATE TABLE barrios (
-    id INT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL
-);
 
 INSERT INTO barrios (id, nombre) VALUES
 (1, 'El Raval'),
