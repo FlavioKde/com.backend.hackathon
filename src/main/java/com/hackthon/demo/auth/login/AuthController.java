@@ -4,7 +4,10 @@ package com.hackthon.demo.auth.login;
 import com.hackthon.demo.auth.dto.AuthRequest;
 import com.hackthon.demo.auth.dto.AuthResponse;
 import com.hackthon.demo.config.ApiConfig;
+import com.hackthon.demo.dto.RegisterRequest;
+import com.hackthon.demo.entity.User;
 import jakarta.annotation.security.PermitAll;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,6 +31,11 @@ public class AuthController {
                 String token = authService.authenticate(authRequest.getUsername(), authRequest.getPassword());
 
                 return ResponseEntity.ok(new AuthResponse(token));
+        }
+
+        @PostMapping("/register")
+        public ResponseEntity<String> register(@RequestBody @Valid RegisterRequest request) {
+                return authService.register(request);
         }
 
 
