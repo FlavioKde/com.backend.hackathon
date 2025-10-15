@@ -1,8 +1,9 @@
 package com.hackthon.demo.auth.service.mysql;
 
-import com.propydis.studio.auth.model.mysql.CustomUserDetails;
-import com.propydis.studio.domain.user.user.User;
-import com.propydis.studio.domain.user.user.repository.UserRepository;
+
+import com.hackthon.demo.auth.model.mysql.CustomUserDetails;
+import com.hackthon.demo.repository.UserRepository;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

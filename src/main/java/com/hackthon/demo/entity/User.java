@@ -1,5 +1,7 @@
 package com.hackthon.demo.entity;
 
+
+// Entity
 public class User {
 
     private long id;

@@ -2,6 +2,7 @@ package com.hackthon.demo.auth.login;
 
 
 import com.hackthon.demo.auth.jwt.JwtService;
+import com.hackthon.demo.repository.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

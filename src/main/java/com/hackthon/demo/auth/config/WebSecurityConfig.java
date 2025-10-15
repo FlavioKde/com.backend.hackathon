@@ -76,13 +76,8 @@ public class WebSecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/v0.1/auth/login").permitAll()
 
                         //public data
-                        .requestMatchers(HttpMethod.GET,  "/api/v0.1/property/getAll").permitAll()
-                        .requestMatchers(HttpMethod.GET,  "/api/v0.1/property/get/**").permitAll()
-                        .requestMatchers(HttpMethod.POST,  "/api/v0.1/contact/save").permitAll()
-                        .requestMatchers(HttpMethod.POST,  "/api/v0.1/contact").permitAll()
-                        .requestMatchers(HttpMethod.GET,  "/api/v0.1/project/getAll").permitAll()
-                        .requestMatchers(HttpMethod.GET,  "/api/v0.1/project/get/**").permitAll()
 
+// Aquí iría el registar
                         .requestMatchers(
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
