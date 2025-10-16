@@ -26,7 +26,6 @@ dependencies {
 
 	// Data-BD
 	runtimeOnly("com.h2database:h2")
-	runtimeOnly ("mysql:mysql-connector-java")
 
 	// Security
 	implementation("org.springframework.boot:spring-boot-starter-security")
@@ -35,14 +34,13 @@ dependencies {
 	implementation("io.jsonwebtoken:jjwt-api:0.11.5")
 	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
 	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
-	implementation ("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
+
+	// Environment Variables
+	implementation("io.github.cdimascio:dotenv-java:2.2.4")
 
 
 	// Swagger/OpenAPI
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9")
-
-	// Logging
-	implementation ("org.springframework.boot:spring-boot-starter-logging")
 
 	// Testing
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
